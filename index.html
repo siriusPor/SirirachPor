@@ -4,19 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สุ่มโจทย์ DNA Fingerprint</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #question {
+            margin-top: 30px;
+            color: #333;
+            font-size: 20px;
+        }
+    </style>
 </head>
-<body style="text-align: center; padding-top: 100px; font-family: 'Arial', sans-serif;">
+<body>
     <h1>สุ่มโจทย์ DNA Fingerprint</h1>
     <button onclick="generate()">คลิกเพื่อรับโจทย์</button>
-    <h2 id="question" style="margin-top: 30px; color: green;"></h2>
+    <h2 id="question"></h2>
 
     <script>
         const questions = [
-            "โจทย์ที่ 1: ตัด DNA ด้วย EcoRI ได้กี่ชิ้น?",
-            "โจทย์ที่ 2: หาแม่ พ่อ ลูกจากแพทเทิร์น DNA gel",
-            "โจทย์ที่ 3: อธิบายการทำงานของ restriction enzyme",
-            "โจทย์ที่ 4: วิเคราะห์ STR จากตัวอย่าง DNA",
-            "โจทย์ที่ 5: ทำไมขนาดชิ้น DNA ถึงแตกต่างกัน?"
+            "โจทย์ที่ 1: ตัด DNA ด้วยเอนไซม์ EcoRI ได้กี่ชิ้น?",
+            "โจทย์ที่ 2: เปรียบเทียบลายนิ้วมือ DNA ของสมาชิกในครอบครัว",
+            "โจทย์ที่ 3: อธิบายหลักการทำงานของ Restriction Enzyme",
+            "โจทย์ที่ 4: วิเคราะห์ตัวอย่าง STR บนเจลอิเล็กโตรโฟเรซิส",
+            "โจทย์ที่ 5: ทำไม fragment DNA ที่ได้จึงมีขนาดต่างกัน?",
+            "โจทย์ที่ 6: ถ้าใช้เอนไซม์ HindIII จะได้ band pattern แบบไหน?",
+            "โจทย์ที่ 7: ออกแบบการทดลอง DNA fingerprint ของสัตว์เลี้ยง",
+            "โจทย์ที่ 8: วิเคราะห์ความแตกต่างของ DNA จากการย่อยสอง enzyme",
+            "โจทย์ที่ 9: ทำไมการตัด DNA ถึงต้องเลือก restriction enzyme ให้เหมาะสม?",
+            "โจทย์ที่ 10: สร้างแผนภาพผลเจลอิเล็กโตรโฟเรซิสจากการตัด DNA จริง"
         ];
 
         function generate() {
