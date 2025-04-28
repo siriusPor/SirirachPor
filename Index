@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุ่มโจทย์ DNA Fingerprint</title>
+</head>
+<body style="text-align: center; padding-top: 100px; font-family: 'Arial', sans-serif;">
+    <h1>สุ่มโจทย์ DNA Fingerprint</h1>
+    <button onclick="generate()">คลิกเพื่อรับโจทย์</button>
+    <h2 id="question" style="margin-top: 30px; color: green;"></h2>
+
+    <script>
+        const questions = [
+            "โจทย์ที่ 1: ตัด DNA ด้วย EcoRI ได้กี่ชิ้น?",
+            "โจทย์ที่ 2: หาแม่ พ่อ ลูกจากแพทเทิร์น DNA gel",
+            "โจทย์ที่ 3: อธิบายการทำงานของ restriction enzyme",
+            "โจทย์ที่ 4: วิเคราะห์ STR จากตัวอย่าง DNA",
+            "โจทย์ที่ 5: ทำไมขนาดชิ้น DNA ถึงแตกต่างกัน?"
+        ];
+
+        function generate() {
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            document.getElementById("question").innerText = questions[randomIndex];
+        }
+    </script>
+</body>
+</html>
